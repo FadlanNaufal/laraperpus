@@ -35,7 +35,6 @@
                         </div>
                         <div class="form-group">
                             <button class="btn btn-primary">Save</button>
-                            <a href="{{route('book.index')}}" class="btn btn-warning">Back</a>
                         </div>
                     </form>
                 </div>

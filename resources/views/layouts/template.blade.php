@@ -126,6 +126,7 @@
               <li class="{{ (request()->is('home*')) ? 'active' : '' }}"><a class="nav-link" href="{{route('home')}}"><i class="fas fa-home "></i> <span>Dashboard</span></a></li>
               <li class="menu-header">Data Master</li>
               <li class="{{ (request()->is('book*')) ? 'active' : '' }}"><a class="nav-link" href="{{route('book.index')}}"><i class="fas fa-book"></i> <span>Book</span></a></li>
+              <li class="{{ (request()->is('ebook*')) ? 'active' : '' }}"><a class="nav-link" href="{{route('ebook.index')}}"><i class="fas fa-file-pdf"></i> <span>E-Book</span></a></li>
             </ul>
         </aside>
       </div>

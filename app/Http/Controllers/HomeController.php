@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Book;
+use App\Ebook;
 
 class HomeController extends Controller
 {
@@ -25,6 +26,7 @@ class HomeController extends Controller
     public function index()
     {
         $book = Book::count();
-        return view('home',compact('book'));
+        $ebook = Ebook::count();
+        return view('home',compact('book','ebook'));
     }
 }

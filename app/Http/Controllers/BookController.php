@@ -66,11 +66,9 @@ class BookController extends Controller
             $book->book_pict = $newName;
 
             $book->save();
-            return redirect()->route('book.index');
+            return redirect()->route('book.index')->with('success','Berhasil Simpan data');
         }else{
-
-            return back();
-
+            return back()->with('error','Gagal Simpan data');;
         }
     }
 
@@ -139,8 +137,11 @@ class BookController extends Controller
      * @param  \App\Book  $book
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Book $book)
+    public function destroy($id)
     {
-        //
+        $book = Book::where('id',$id)->first();
+        \File::delete('uploads/'.$book->book_pict);
+        $book->delete();
+        return redirect()->route('book.index')->with('success','Berhasil Update data');
     }
 }

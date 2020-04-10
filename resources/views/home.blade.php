@@ -26,14 +26,14 @@
                         <div class="col-md-4">
                             <div class="card card-statistic-1">
                                 <div class="card-icon bg-primary">
-                                <i class="far fa-user"></i>
+                                <i class="fas fa-file-pdf"></i>
                                 </div>
                                 <div class="card-wrap">
                                 <div class="card-header">
-                                    <h4>Total Admin</h4>
+                                    <h4>Total E-Book</h4>
                                 </div>
                                 <div class="card-body">
-                                    10
+                                    {{$ebook}}
                                 </div>
                                 </div>
                             </div>

@@ -48,7 +48,6 @@
                         </div>
                         <div class="form-group">
                             <button class="btn btn-info">Update</button>
-                            <a href="{{route('book.index')}}" class="btn btn-warning">Back</a>
                         </div>
                     </form>
                 </div>

@@ -22,5 +22,6 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::resources([
-    'book'=>'BookController'
+    'book'=>'BookController',
+    'ebook'=>'EbookController',
 ]);
