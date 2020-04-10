@@ -105,7 +105,32 @@ class BookController extends Controller
      */
     public function update(Request $request, Book $book)
     {
-        //
+        if($request->hasFile('book_pict')){
+            $book->book_code = $request->book_code;
+            $book->book_name = $request->book_name;
+            $book->book_desc = $request->book_desc;
+            $book->book_stock = $request->book_stock;
+            $book->book_status = $request->book_status;
+            
+            $file = $request->book_pict;
+            $ext = $file->getClientOriginalExtension();
+            $newName = 'Foto-'. $request->book_name . '.' .$ext;
+            $file->move('uploads',$newName);
+
+            $book->book_pict = $newName;
+
+            $book->update();
+            return redirect()->route('book.index')->with('success','Berhasil Update data');
+        }else{
+            $book->book_code = $request->book_code;
+            $book->book_name = $request->book_name;
+            $book->book_desc = $request->book_desc;
+            $book->book_stock = $request->book_stock;
+            $book->book_status = $request->book_status;
+
+            $book->update();
+            return redirect()->route('book.index')->with('success','Berhasil Update data');
+        }
     }
 
     /**

@@ -2,10 +2,14 @@
 
 @section('content')
 <div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-12">
+<section class="section">
+          <div class="section-header">
+            <h1>Create Book</h1>
+          </div>
+          <a href="{{route('book.index')}}" class="btn btn-warning">Back</a>
+          <br><br>
+          <div class="section-body">
             <div class="card">
-                <div class="card-header">Form input</div>
                 <div class="card-body">
                     <form action="{{route('book.store')}}" method="post" enctype="multipart/form-data">
                         @csrf
@@ -31,6 +35,7 @@
                         </div>
                         <div class="form-group">
                             <button class="btn btn-primary">Save</button>
+                            <a href="{{route('book.index')}}" class="btn btn-warning">Back</a>
                         </div>
                     </form>
                 </div>

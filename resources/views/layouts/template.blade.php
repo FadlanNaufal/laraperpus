@@ -132,6 +132,7 @@
 
       <!-- Main Content -->
       <div class="main-content">
+        @include('alert')
         @yield('content')
       </div>
       <footer class="main-footer">
