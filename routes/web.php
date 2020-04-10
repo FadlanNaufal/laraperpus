@@ -24,4 +24,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::resources([
     'book'=>'BookController',
     'ebook'=>'EbookController',
+    'reader'=>'ReaderController',
+    'borrow'=>'BorrowController',
+    'borrow_detail'=>'BorrowDetailController',
 ]);
